@@ -1,6 +1,7 @@
 package services.ravi.springtutorials.model;
 
 import lombok.Data;
+import services.ravi.springtutorials.validator.CourseCode;
 
 import javax.validation.constraints.*;
 
@@ -19,4 +20,7 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
     private String postalCode;
+
+    @CourseCode()
+    private String courseCode;
 }

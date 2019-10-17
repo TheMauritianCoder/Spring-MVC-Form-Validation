@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Tutorials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h3>Processed Formed </h3>
+
+    <p>
+    The customer is confirmed:
+        <span th:text="${customer.firstname}"></span>
+        <span th:text="${customer.lastname}"></span>
+    </p>
+    <p>
+        Postal Code:   <span th:text="${customer.postalCode}"></span>
+    </p>
+    <p>
+     Free Passes:   <span th:text="${customer.freePasses}"></span>
+    </p>
+</body>
+</html>

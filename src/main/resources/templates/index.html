@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Tutorials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h3>Spring Tutorials</h3>
+
+    <form action="#" th:action="@{/}" th:object="${customer}" method="post">
+        <p>
+            Firstname: <input type="text" th:field="*{firstname}" />
+        </p>
+        <p>
+            Lastname: <input type="text" th:field="*{lastname}" />
+        </p>
+        <p>
+            Freepasses: <input type="text" th:field="*{freePasses}" />
+        </p>
+        <p>
+            Postal Code: <input type="text" th:field="*{postalCode}" />
+        </p>
+        <p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </p>
+
+        <ul style="color:red">
+            <li th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+        </ul>
+    </form>
+
+</body>
+</html>
